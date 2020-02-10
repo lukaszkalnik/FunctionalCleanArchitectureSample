@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("android.extensions")
+    kotlin("kapt")
 }
 
 android {
@@ -28,6 +29,11 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.1.0")
 
     implementation("com.squareup.retrofit2:retrofit:2.7.0")
+
+    val arrowVersion = "0.10.4"
+    implementation("io.arrow-kt:arrow-core:$arrowVersion")
+    implementation("io.arrow-kt:arrow-syntax:$arrowVersion")
+    kapt("io.arrow-kt:arrow-meta:$arrowVersion")
 }
 
 dependencies {
